@@ -10,7 +10,7 @@ module.exports = {
 	darkMode: ['class', '[data-theme="dark"]'],
 	daisyui: {
 		themes: [
-			"emerald",
+			"bumblebee",
 			{
 				dark: {
 					...require("daisyui/src/colors/themes")["[data-theme=forest]"],
