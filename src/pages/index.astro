@@ -14,191 +14,237 @@ let pageUrl = new URL(Astro.url.pathname, Astro.site)
 ---
 <!DOCTYPE html>
 <html lang='pt-BR'>
-    <head>
-        <!-- Global Metadata -->
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width" />
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
-        <!-- Primary Meta Tags -->
-        <title>{title}</title>
-        <meta name="title" content={title} />
-        <meta name="description" content={description} />
-        <link rel="canonical" href={pageUrl} />
-    </head>
+<head>
+    <!-- Global Metadata -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
-    <body>
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={pageUrl} />
+</head>
 
-        <main class="text-xl [&>section]:px-4">
+<body>
 
-            <!-- 1 Promessa, Título e Subpromessa -->
-            <section id="promessa-e-subpromessa" class="py-10 text-center [&>*]:md:mx-auto [&>*]:md:mb-12 md:bg-gradient-to-br md:from-gray-900 md:to-base-100" data-theme="dark">
-                <div class="md:pb-2 md:max-w-screen-md md:text-3xl font-semibold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-teal-500">Inserir promessa secundária aqui. Ex.: "Aprenda a..."</div>
-                <h1 class="md:text-7xl text-5xl font-bold tracking-wide mb-8 text-primary">Meu curso</h1>
-                <p class="md:max-w-screen-md text-primary mb-8">Aqui vai a promessa principal em 2 ou 3 linhas. Ex.: "Descubra o exato passo a passo para..."</p>
-                <Cta>Quero aprender agora!</Cta>
-            </section>
+    <main class="text-xl [&>section]:px-4">
 
-            <!-- 2 Ancoragem de Preço -->
-            <section id="ancoragem-de-preco" class="md:pb-32 py-6 text-center">
-                <p class="text-4xl font-extrabold uppercase mb-2 text-red-600">de <span class="line-through">R$ 97,00</span></p>
-                <p class="font-semibold uppercase mb-2">por apenas</p>
-                <p class="text-8xl font-black uppercase mb-4 text-green-600">R$ 10</p>
-                <p class="text-2xl font-bold uppercase mb-8">- risco zero! -</p>
-                <div class="divider my-4"></div>
-            </section>
-        
-            <!-- 3 Copy Inicial -->
-            <section id="copy-inicial" class="py-6 leading-relaxed [&>p]:mb-4 md:pb-32 md:max-w-screen-md md:mx-auto">
-                <h2 class="text-2xl font-bold mb-4">Caro(a) Leitora(a)…</h2>
-                <p>Aqui começa o texto da carta de vendas.  Cada parágrafo é envolto pelas tags html de parágrafo (começando com "p" e terminando com "/p"). Todas as tags html são envoltas pelos símbolos de menor que ("&lt") e maior que ("&gt")</p>
-                <p>Para destacar os textos, você pode usar <b>negrito</b> usando o elemento "b", da forma que você consegue ver no código. Para <em>itálico</em>, a ideia é semelhante. Basta envolver pelas tags "em" (de <em>emphasis</em>). Para <u>sublinhado</u>, use o "u" de underline.</p>
-                <h3 class="text-2xl font-bold mt-8 mb-4">Subtítulo de Terceiro Nível</h3>
-                <p>Aqui você pode prosseguir com o copy principal da sua carta de vendas.</p>
-                <p>Seguimos da mesma forma, já provavelmente nos encaminhando para a <b>solução</b>.</p>
-                <p class="mb-12">E eu também quero que você tenha os mesmos resultados, tal qual o Fulano de Tal teve: (aqui você provavelmente vai colocar aguma prova social ou prova do benefício do produto):</p>
-                <img src={copyImg} alt="Substituit pelo Texto Alternativo da Foto" class="shadow-lg rounded-lg">
-            </section>
+        <!-- 1 Promessa, Título e Subpromessa -->
+        <section id="promessa-e-subpromessa" class="py-10 text-center [&>*]:md:mx-auto [&>*]:md:mb-12 md:bg-gradient-to-br md:from-gray-900 md:to-base-100" data-theme="dark">
+            <div class="md:pb-2 md:max-w-screen-md md:text-3xl font-semibold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-teal-500">Inserir promessa secundária aqui. Ex.: "Aprenda a..."</div>
+            <h1 class="md:text-7xl text-5xl font-bold tracking-wide mb-8 text-primary">Meu Novo Curso</h1>
+            <p class="md:max-w-screen-md text-primary mb-8">Aqui vai a promessa principal em 2 ou 3 linhas. Ex.: "Descubra o exato passo a passo para..."</p>
+            <Cta>Quero aprender agora!</Cta>
+        </section>
 
-            <!-- 4 Produto e Checklist com Benefícios -->
-            <section id="produto-checklist" class="py-12 [&>p]:mb-4 md:pb-32 md:max-w-screen-md md:mx-auto">
-                <h2 class="md:text-2xl md:mb-8 text-center font-bold mb-4 uppercase text-primary">Título ou Nome do Método ⚡</h2>
+        <!-- 2 Ancoragem de Preço -->
+        <section id="ancoragem-de-preco" class="md:pb-32 py-6 text-center">
+            <p class="text-4xl font-extrabold uppercase mb-2 text-red-600">de <span class="line-through">R$ 97,00</span></p>
+            <p class="font-semibold uppercase mb-2">por apenas</p>
+            <p class="text-8xl font-black uppercase mb-4 text-green-600">R$ 10</p>
+            <p class="text-2xl font-bold uppercase mb-8">- risco zero! -</p>
+            <div class="divider my-4"></div>
+        </section>
 
-                <h3 class="md:text-4xl text-3xl text-center font-bold mb-4 text-black">A estratégia e as ferramentas para conseguir xxxxx em menos de 15 dias.</h3>
+        <!-- 3 Copy Inicial -->
+        <section id="copy-inicial" class="py-6 leading-relaxed [&>p]:mb-4 md:pb-32 md:max-w-screen-md md:mx-auto">
+            <h2 class="text-2xl font-bold mb-4">Caro(a) Leitora(a)…</h2>
+            <p>Aqui começa o texto da carta de vendas. Cada parágrafo é envolto pelas tags html de parágrafo (começando com "p" e terminando com "/p"). Todas as tags html são envoltas pelos símbolos de menor que ("&lt") e maior que ("&gt")</p>
+            <p>Para destacar os textos, você pode usar <b>negrito</b> usando o elemento "b", da forma que você consegue ver no código. Para <em>itálico</em>, a ideia é semelhante. Basta envolver pelas tags "em" (de <em>emphasis</em>). Para <u>sublinhado</u>, use o "u" de underline.</p>
+            <h3 class="text-2xl font-bold mt-8 mb-4">Subtítulo de Terceiro Nível</h3>
+            <p>Aqui você pode prosseguir com o copy principal da sua carta de vendas.</p>
+            <p>Seguimos da mesma forma, já provavelmente nos encaminhando para a <b>solução</b>.</p>
+            <p class="mb-12">E eu também quero que você tenha os mesmos resultados, tal qual o Fulano de Tal teve: (aqui você provavelmente vai colocar aguma prova social ou prova do benefício do produto):</p>
+            <img src={copyImg} alt="Substituit pelo Texto Alternativo da Foto" class="shadow-lg rounded-lg">
+        </section>
 
-                <ul class="md:p-8 md:text-black border-2 border-dashed p-2 mb-8 rounded-xl font-semibold [&>li]:flex [&>li]:items-center [&>li]:mb-4">
-                    <li><Check/><div>Aqui vai uma lista de benefícios para o seu cliente</div></li>
-                    <li><Check/><div>Eu gosto de colocar em formas de perguntas</div></li>
-                    <li><Check/><div>Para que a minha solução, no próximo parágrafo, seja a resposta a essas perguntas.</div></li>
-                    <li><Check/><div>Talvez você ache essas perguntas digitando no google e vendo o autocompletar</div></li>
-                    <li><Check/><div>Ou pegando algumas inspirações com o ChatGPT, por exemplo</div></li>
-                </ul>
+        <!-- 4 Produto e Checklist com Benefícios -->
+        <section id="produto-checklist" class="py-12 [&>p]:mb-4 md:pb-32 md:max-w-screen-md md:mx-auto">
+            <h2 class="md:text-2xl md:mb-8 text-center font-bold mb-4 uppercase text-primary">Título ou Nome do Método ⚡</h2>
 
-                <p><u>É exatamente isso</u> que você vai aprender no [Nome do seu Método].</p>
-                <p class="text-2xl">Se você nunca fez xxxxxxx, vou te ensinar a fazer yyyyyyy em menos de dd dias.</p>
-                <p class="text-2xl">E se você já faz xxxxx, você vai conseguir <b>fazer uma coisa nova incrível que te leva ao próximo patamar.</b></p>
-            </section>
+            <h3 class="md:text-4xl text-3xl text-center font-bold mb-4 text-black">A estratégia e as ferramentas para conseguir xxxxx em menos de 15 dias.</h3>
 
-            <!-- 5 Nesse curso você vai ter -->
-            <section id="funcionalidades" class="py-12 md:pt-20 md:pb-32 leading-relaxed bg-gradient-to-b from-gray-800 to-gray-900" data-theme="dark">
-                <h2 class="md:mb-20 md:text-5xl text-4xl font-bold tracking-wide mb-8 text-center text-primary">O que você vai encontrar aqui?</h2>
-                <div class="flex gap-8 flex-wrap justify-center">
-                    <div class="w-full max-w-sm p-8 rounded-3xl shadow-2xl bg-base-100 text-white">
-                        <span class="text-3xl mb-2">🛠️</span>
-                        <h3 class="text-2xl font-semibold mb-2">Título do Card</h3>
-                        <p>Texto do Card, exibindo o aprendizado ou benefício daquele assunto do curso. Acima do título há um emoji.</p>
-                    </div>
-                    <div class="w-full max-w-sm card card-body shadow-2xl bg-base-100 text-white">
-                        <span class="text-3xl mb-2">🚀</span>
-                        <h3 class="text-2xl font-semibold mb-2">Título do Card</h3>
-                        <p>Texto do Card, exibindo o aprendizado ou benefício daquele assunto do curso. Acima do título há um emoji.</p>
-                    </div>
-                    <div class="w-full max-w-sm card card-body shadow-2xl bg-base-100 text-white">
-                        <span class="text-3xl mb-2">🔎</span>
-                        <h3 class="text-2xl font-semibold mb-2">Título do Card</h3>
-                        <p>Texto do Card, exibindo o aprendizado ou benefício daquele assunto do curso. Acima do título há um emoji.</p>
-                    </div>
-                    <div class="w-full max-w-sm card card-body shadow-2xl bg-base-100 text-white">
-                        <span class="text-3xl mb-2">🎨</span>
-                        <h3 class="text-2xl font-semibold mb-2">Título do Card</h3>
-                        <p>Texto do Card, exibindo o aprendizado ou benefício daquele assunto do curso. Acima do título há um emoji.</p>
-                    </div>
-                    <div class="w-full max-w-sm card card-body shadow-2xl bg-base-100 text-white">
-                        <span class="text-3xl mb-2">📱💻</span>
-                        <h3 class="text-2xl font-semibold mb-2">Título do Card</h3>
-                        <p>Texto do Card, exibindo o aprendizado ou benefício daquele assunto do curso. Acima do título há um emoji.</p>
-                    </div>
+            <ul class="md:p-8 md:text-black border-2 border-dashed p-2 mb-8 rounded-xl font-semibold [&>li]:flex [&>li]:items-center [&>li]:mb-4">
+                <li>
+                    <Check />
+                    <div>Aqui vai uma lista de benefícios para o seu cliente</div>
+                </li>
+                <li>
+                    <Check />
+                    <div>Eu gosto de colocar em formas de perguntas</div>
+                </li>
+                <li>
+                    <Check />
+                    <div>Para que a minha solução, no próximo parágrafo, seja a resposta a essas perguntas.</div>
+                </li>
+                <li>
+                    <Check />
+                    <div>Talvez você ache essas perguntas digitando no google e vendo o autocompletar</div>
+                </li>
+                <li>
+                    <Check />
+                    <div>Ou pegando algumas inspirações com o ChatGPT, por exemplo</div>
+                </li>
+            </ul>
+
+            <p><u>É exatamente isso</u> que você vai aprender no [Nome do seu Método].</p>
+            <p class="text-2xl">Se você nunca fez xxxxxxx, vou te ensinar a fazer yyyyyyy em menos de dd dias.</p>
+            <p class="text-2xl">E se você já faz xxxxx, você vai conseguir <b>fazer uma coisa nova incrível que te leva ao próximo patamar.</b></p>
+        </section>
+
+        <!-- 5 Nesse curso você vai ter -->
+        <section id="funcionalidades" class="py-12 md:pt-20 md:pb-32 leading-relaxed bg-gradient-to-b from-gray-800 to-gray-900" data-theme="dark">
+            <h2 class="md:mb-20 md:text-5xl text-4xl font-bold tracking-wide mb-8 text-center text-primary">O que você vai encontrar aqui?</h2>
+            <div class="flex gap-8 flex-wrap justify-center">
+                <div class="w-full max-w-sm p-8 rounded-3xl shadow-2xl bg-base-100 text-white">
+                    <span class="text-3xl mb-2">🛠️</span>
+                    <h3 class="text-2xl font-semibold mb-2">Título do Card</h3>
+                    <p>Texto do Card, exibindo o aprendizado ou benefício daquele assunto do curso. Acima do título há um emoji.</p>
                 </div>
-            </section>
+                <div class="w-full max-w-sm card card-body shadow-2xl bg-base-100 text-white">
+                    <span class="text-3xl mb-2">🚀</span>
+                    <h3 class="text-2xl font-semibold mb-2">Título do Card</h3>
+                    <p>Texto do Card, exibindo o aprendizado ou benefício daquele assunto do curso. Acima do título há um emoji.</p>
+                </div>
+                <div class="w-full max-w-sm card card-body shadow-2xl bg-base-100 text-white">
+                    <span class="text-3xl mb-2">🔎</span>
+                    <h3 class="text-2xl font-semibold mb-2">Título do Card</h3>
+                    <p>Texto do Card, exibindo o aprendizado ou benefício daquele assunto do curso. Acima do título há um emoji.</p>
+                </div>
+                <div class="w-full max-w-sm card card-body shadow-2xl bg-base-100 text-white">
+                    <span class="text-3xl mb-2">🎨</span>
+                    <h3 class="text-2xl font-semibold mb-2">Título do Card</h3>
+                    <p>Texto do Card, exibindo o aprendizado ou benefício daquele assunto do curso. Acima do título há um emoji.</p>
+                </div>
+                <div class="w-full max-w-sm card card-body shadow-2xl bg-base-100 text-white">
+                    <span class="text-3xl mb-2">📱💻</span>
+                    <h3 class="text-2xl font-semibold mb-2">Título do Card</h3>
+                    <p>Texto do Card, exibindo o aprendizado ou benefício daquele assunto do curso. Acima do título há um emoji.</p>
+                </div>
+            </div>
+        </section>
 
-            <!-- 6 Bônus -->
-            <section id="bonus" class="py-20 lg:pb-32">
-                <h2 class="text-5xl mb-16 text-center font-black text-black">Aulas Bônus</h2>
-                <div class="flex gap-12 flex-wrap justify-center">
+        <!-- 6 Bônus -->
+        <section id="bonus" class="py-20 lg:pb-32">
+            <h2 class="text-5xl mb-16 text-center font-black text-black">Aulas Bônus</h2>
+            <div class="flex gap-12 flex-wrap justify-center">
 
-                    <div class="w-full max-w-sm p-8 rounded-3xl shadow-2xl bg-base-100">
+                <div class="w-full max-w-sm p-8 rounded-3xl shadow-2xl bg-base-100">
                     <p class="text-3xl mb-4">📩</p>
                     <h3 class="text-4xl font-bold mb-6">Título do Card</h3>
                     <ul class="[&>li]:flex [&>li]:items-center [&>li]:mb-4">
-                        <li><Check/> Nada impede que você coloque uma lista</li>
-                        <li><Check/> Aqui dentro do card mesmo</li>
-                        <li><Check/> <div>Talvez você ajuste os <em>"paddings"</em></div></li>
-                        <li><Check/> Para melhorar o visual do card</li>
+                        <li>
+                            <Check /> Nada impede que você coloque uma lista
+                        </li>
+                        <li>
+                            <Check /> Aqui dentro do card mesmo
+                        </li>
+                        <li>
+                            <Check />
+                            <div>Talvez você ajuste os <em>"paddings"</em></div>
+                        </li>
+                        <li>
+                            <Check /> Para melhorar o visual do card
+                        </li>
                     </ul>
-                    </div>
+                </div>
 
-                    <div class="w-full max-w-sm p-8 rounded-3xl shadow-2xl bg-base-100">
+                <div class="w-full max-w-sm p-8 rounded-3xl shadow-2xl bg-base-100">
                     <p class="text-3xl mb-4">👩🏾‍💻</p>
                     <h3 class="text-3xl font-bold mb-6">Título do Card</h3>
                     <p>E aqui eu coloquei mais um texto normal dentro do card, mas você pode colocar qualquer coisa.</p>
-                    </div>
-
                 </div>
-                
-            </section>
 
-            <!-- 7 Oferta -->
-            <section id="oferta" class="py-12 lg:pb-32" data-theme="dark">
-                
-                <h2 class="text-4xl font-bold tracking-wide mb-20 text-center dark:text-white md:mb-20">Aproveite os últimos dias da promoção:</h2>
-                <div class="px-2 py-8 md:max-w-screen-md md:mx-auto">
-        
-                    <p class="text-2xl text-center font-semibold mb-4 dark:text-white">de <span class="line-through text-red-600">R$ 97,00</span> por</p>
-                    <p class="text-8xl text-center uppercase font-black mb-12 bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-lime-500">R$ 10</p>
-        
-                    <div class="divider mb-8"></div>
-        
-                    <ul class="md:mb-12 mb-8 [&>li]:flex [&>li]:items-center [&>li]:mb-4">
-                        <li><Check/> Item de Benefício ou Objetivo #1</li>
-                        <li><Check/> Item de Benefício ou Objetivo #2</li>
-                        <li><Check/> Mais um item de benefício</li>
-                        <li><Check/> Mais um item de benefício</li>
-                        <li><Check/> Mais um item de benefício</li>
-                        <li><Check/> Outro item de benefício</li>
-                        <li><Check/> Outro item de benefício</li>
-                        <li><Check/> Outro item de benefício</li>
-                        <li><Check/> Outro item de benefício</li>
-                    </ul>
-                    
-                    <Cta>Quero começar agora!</Cta>
-        
-                    <p class="text-center text-sm">
-                        Pagamento único.<br>
-                        Oferta especial por tempo limitado, <br> o preço aumentará em breve.
-                    </p>
             </div>
-                    
-            </section>
 
-            <!-- 8 15 dias de garantia -->
-            <section id="garantia" class="py-16 md:flex md:gap-12 md:items-center md:max-w-screen-lg md:mx-auto">
-                <!-- <SeloGarantia15dias/> -->
-                <img src={garantia15} alt="Garantia de 15 dias" class="md:mb-0 mb-8 mx-auto" width="240" height="240"/>
-                <div>
-                    <h2 class="md:mb-8 md:text-4xl text-3xl font-bold tracking-wide mb-12 text-black dark:text-white">15 dias de Garantia. <br class="hidden md:inline"> 100% de Satisfação. Risco Zero.</h2>                
-                    <p>Experimente todo o curso e veja se é a coisa certa para você. Se não for, devolvemos 100% do seu dinheiro (e a amizade continua).</p>
-                </div>
-            </section>
+        </section>
 
-            <!-- 9 Último CTA -->
-            <section id="ultimo-cta" class="py-32" data-theme="dark">
-                <div class="w-48 mx-auto"><LogoSvg/></div>
-                <h2 class="text-5xl font-bold my-16 text-center text-primary">Última chamada gigante para fechar a página de um jeito inspirador.</h2>
-                <Cta>Começar agora mesmo</Cta>
-            </section>
+        <!-- 7 Oferta -->
+        <section id="oferta" class="py-12 lg:pb-32" data-theme="dark">
 
-        </main>
-        <footer class="text-center pb-12 pt-16 md:pt-40" data-theme="dark">
-            <div class="divider mb-12"></div> 
-            <div class="w-fit mx-auto mb-4">
-                <Logo/>
-            </div> 
-            <!-- <Social/> -->
-            <p class="opacity-80 mb-4">
-                Copyright © 2023 Sua Empresa <br class="md:hidden">
-                CNPJ 00.000.000/0001-00 RAZÃO SOCIAL
-            </p>
-            <p class="opacity-80">Feito com 🧡 e ☀️</p>
-        </footer>
-    </body>
+            <h2 class="text-4xl font-bold tracking-wide mb-20 text-center dark:text-white md:mb-20">Aproveite os últimos dias da promoção:</h2>
+            <div class="px-2 py-8 md:max-w-screen-md md:mx-auto">
+
+                <p class="text-2xl text-center font-semibold mb-4 dark:text-white">de <span class="line-through text-red-600">R$ 97,00</span> por</p>
+                <p class="text-8xl text-center uppercase font-black mb-12 bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-lime-500">R$ 10</p>
+
+                <div class="divider mb-8"></div>
+
+                <ul class="md:mb-12 mb-8 [&>li]:flex [&>li]:items-center [&>li]:mb-4">
+                    <li>
+                        <Check /> Item de Benefício ou Objetivo #1
+                    </li>
+                    <li>
+                        <Check /> Item de Benefício ou Objetivo #2
+                    </li>
+                    <li>
+                        <Check /> Mais um item de benefício
+                    </li>
+                    <li>
+                        <Check /> Mais um item de benefício
+                    </li>
+                    <li>
+                        <Check /> Mais um item de benefício
+                    </li>
+                    <li>
+                        <Check /> Outro item de benefício
+                    </li>
+                    <li>
+                        <Check /> Outro item de benefício
+                    </li>
+                    <li>
+                        <Check /> Outro item de benefício
+                    </li>
+                    <li>
+                        <Check /> Outro item de benefício
+                    </li>
+                </ul>
+
+                <Cta>Quero começar agora!</Cta>
+
+                <p class="text-center text-sm">
+                    Pagamento único.<br>
+                    Oferta especial por tempo limitado, <br> o preço aumentará em breve.
+                </p>
+            </div>
+
+        </section>
+
+        <!-- 8 15 dias de garantia -->
+        <section id="garantia" class="py-16 md:flex md:gap-12 md:items-center md:max-w-screen-lg md:mx-auto">
+            <!-- <SeloGarantia15dias/> -->
+            <img src={garantia15} alt="Garantia de 15 dias" class="md:mb-0 mb-8 mx-auto" width="240" height="240" />
+            <div>
+                <h2 class="md:mb-8 md:text-4xl text-3xl font-bold tracking-wide mb-12 text-black dark:text-white">15 dias de Garantia. <br class="hidden md:inline"> 100% de Satisfação. Risco Zero.</h2>
+                <p>Experimente todo o curso e veja se é a coisa certa para você. Se não for, devolvemos 100% do seu dinheiro (e a amizade continua).</p>
+            </div>
+        </section>
+
+        <!-- 9 Último CTA -->
+        <section id="ultimo-cta" class="py-32" data-theme="dark">
+            <div class="w-48 mx-auto">
+                <LogoSvg />
+            </div>
+            <h2 class="text-5xl font-bold my-16 text-center text-primary">Última chamada gigante para fechar a página de um jeito inspirador.</h2>
+            <Cta>Começar agora mesmo</Cta>
+        </section>
+
+    </main>
+    <footer class="text-center pb-12 pt-16 md:pt-40" data-theme="dark">
+        <div class="divider mb-12"></div>
+        <div class="w-fit mx-auto mb-4">
+            <Logo />
+        </div>
+        <!-- <Social/> -->
+        <p class="opacity-80 mb-4">
+            Copyright © 2023 Sua Empresa <br class="md:hidden">
+            CNPJ 00.000.000/0001-00 RAZÃO SOCIAL
+        </p>
+        <p class="opacity-80">Feito com 🧡 e ☀️</p>
+    </footer>
+</body>
+
 </html>
